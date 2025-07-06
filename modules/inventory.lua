@@ -103,7 +103,16 @@ return {
     if log then
       ailLogger = loaded.logger.interface.logger("inventory", "abstractInvLib")
     end
-    ailLogger = config.inventory.logAIL.value and ailLogger
+
+    -- ailLogger = config.inventory.logAIL.value and ailLogger
+    if not config.inventory.logAIL.value then
+      ailLogger = setmetatable({}, {
+        __index = function()
+          return function() end
+        end
+      })
+    end
+
     local storage = require("abstractInvLib")(inventories, nil, { redirect = function(s) ailLogger:debug(s) end })
     storage.setBatchLimit(config.inventory.executeLimit.value)
     local transferQueue = {}
