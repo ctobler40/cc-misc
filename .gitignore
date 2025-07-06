@@ -1,0 +1,12 @@
+.cache/
+.vscode/
+log.txt
+config.txt
+basalt.lua
+abstractInvLib.lua
+stone.json
+
+# Jekyll junk files
+.jekyll-metadata
+.jekyll-cache/
+_site/
