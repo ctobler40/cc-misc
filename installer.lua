@@ -60,7 +60,7 @@ local baseInstall = {
   name = "Base MISC",
   files = {
     ["startup.lua"] = fromRepository "storage.lua",
-    ["abstractInvLib.lua"] = fromURL "https://raw.githubusercontent.com/ctobler40/cc-misc/refs/heads/main/abstractInvLib.lua?token=GHSAT0AAAAAADGXPNLP2RAXIAO5X2PRDQZG2DK7MPA",
+    ["abstractInvLib.lua"] = fromURL "https://raw.githubusercontent.com/ctobler40/cc-misc/refs/heads/main/abstractInvLib.lua",
     -- ["abstractInvLib.lua"] = fromURL "https://gist.githubusercontent.com/MasonGulu/57ef0f52a93304a17a9eaea21f431de6/raw/07c3322a5fa0d628e558e19017295728e4ee2e8d/abstractInvLib.lua", -- OLD
     ["common.lua"] = fromRepository "common.lua",
     modules = {
