@@ -1,3 +1,23 @@
+-- Before we run anything in the terminal, we need to pass the password check
+peripheral.find("modem", rednet.open)
+term.clear()
+term.setCursorPos(1, 1)
+print("🔒 Locked")
+print("Please enter password on Monitor 1")
+
+-- Lock screen before proceeding
+while true do
+  local event, senderID, message = os.pullEvent("rednet_message")
+  if message == "unlock_inventory" and type(senderID) == "number" then
+    break
+  end
+end
+
+term.clear()
+term.setCursorPos(1, 1)
+print("✅ Access granted. Loading...")
+sleep(1)
+
 -- storage terminal turtle for the system
 local lib
 
