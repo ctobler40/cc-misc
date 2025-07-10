@@ -1212,6 +1212,6 @@ parallel.waitForAny(table.unpack(funcs))
 while true do
   local _, _, _, _, msg = os.pullEvent("rednet_message")
   if msg == "lock_inventory" then
-    os.reboot()
+    os.shutdown()
   end
 end
